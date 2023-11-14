@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'avance'`, () => {
+  it(`should have as title 'gestión de construcción para gerencia'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('avance');
+    expect(app.title).toEqual('gestión de construcción para gerencia');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('avance app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('app gestión de construcción para gerencia is running!');
   });
 });
