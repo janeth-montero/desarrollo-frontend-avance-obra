@@ -1,0 +1,38 @@
+.fx-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.fx-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.fx-space-between {
+  justify-content: space-between;
+}
+
+.fx-center {
+  justify-content: center;
+}
+
+.fx-items-center {
+  align-items: center;
+}
+
+.fx-fullsize {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .fx-hide-xs {
+    display: none;
+  }
+
+  .fx-column-xs {
+    display: flex;
+    flex-direction: column;
+  }
+
+}

@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import './styles/variables';
+@import './styles/base.scss';
+@import './styles/flex-layout.scss';
+@import './styles/header.scss';
+@import './styles/table.scss';
+@import './styles/forms.scss';
+@import './styles/modal.scss';

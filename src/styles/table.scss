@@ -1,0 +1,60 @@
+@import './variables';
+
+
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  font-size: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+  thead tr {
+    background-color: $color-primary;
+    color: $font-color-light;
+    text-align: left;
+
+    th {
+      border: none;
+      font-size: 1.125rem;
+      padding: 2rem 1.25rem;
+      white-space: nowrap;
+    }
+  }
+
+  tbody tr {
+    border-bottom: none;
+
+    &:nth-of-type(even) {
+      background-color: $background-color;
+    }
+
+    &:last-of-type {
+      border-bottom: 4px solid $color-primary;
+    }
+
+    td {
+      padding: 1rem 1.25rem;
+      border: none;
+      white-space: wrap;
+
+      img {
+        max-width: 100px;
+        height: auto;
+      }
+    }
+  }
+
+}
+
+
+.message {
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem;
+}

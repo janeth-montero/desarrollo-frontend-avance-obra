@@ -1,0 +1,113 @@
+@import './variables';
+
+
+.filter-section {
+  background-color: white;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: none;
+  border: 1px solid darken($background-color, 10%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 3px;
+}
+
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  background-color: white;
+  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+
+input,
+textarea,
+select {
+  font-size: 1rem;
+  padding: 1rem;
+  border: 1px solid darken($background-color, 10%);
+  border-radius: 3px;
+
+  &:focus, &:hover, &:active {
+    border: 1px solid $color-primary;
+  }
+}
+
+
+input[type="text"],
+input[type="number"] {
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+input[type="date"] {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+}
+
+select {
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+
+button {
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+
+  &.btn {
+    background-color: $background-color;
+    color: $font-color;
+  }
+
+  &.btn:hover {
+    background-color: darken($background-color, 5%);
+  }
+
+  &.btn-action {
+    background-color: $color-primary;
+    color: $font-color-light;
+  }
+
+  &.btn-action:hover {
+    background-color: darken($color-primary, 10%);
+  }
+
+  &.btn-submit {
+    background-color: $color-secondary;
+    color: $font-color-light;
+  }
+
+  &.btn-submit:hover {
+    background-color: darken($color-secondary, 10%);
+  }
+
+  &.btn-delete {
+    background-color: white;
+    border: 2px solid $color-warning;
+    color: $color-warning;
+  }
+
+  &.btn-delete:hover {
+    background-color: lighten($color-warning, 37%);
+  }
+
+}
