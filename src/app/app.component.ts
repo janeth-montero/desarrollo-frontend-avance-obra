@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gestión de construcción para gerencia';
+  titulo = 'gestión de construcción para gerencia';
 }

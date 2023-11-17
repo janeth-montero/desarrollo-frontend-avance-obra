@@ -5,8 +5,9 @@
     <thead>
       <tr>
         <th>ID</th>
+        <th>Imagen</th>
         <th>Estado</th>
-        <th>Desarrollo</th>
+        <th>Modelo</th>
         <th>Notas</th>
         <th>Precio</th>
         <th>Ubicación</th>
@@ -17,8 +18,24 @@
 
     <tbody>
 
+      <tr *ngFor="let casa of listadoCasas">
+        <td> <strong>{{ casa.id }}</strong> </td>
+        <td> <img [src]="rutaImagen + casa.imagen" [alt]="casa.id"> </td>
+        <td> <span class="tag">{{ casa.estatus }}</span> </td>
+        <td>{{ casa.modelo }}</td>
+        <td>{{ casa.notas }}</td>
+        <td>{{ casa.precioVenta | currency }}</td>
+        <td>{{ casa.ubicacion }}</td>
+        <td>{{ !!casa.cliente ? casa.cliente : 'N/A' }}</td>
+        <td>{{ !!casa.vendedor ? casa.vendedor : 'N/A' }}</td>
+      </tr>
+
     </tbody>
 
   </table>
 
+</div>
+
+<div class="message" *ngIf="listadoCasas.length === 0">
+  <p>No se encontraron registros...</p>
 </div>
