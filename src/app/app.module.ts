@@ -4,10 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { AutenticacionModule } from './autenticacion/autenticacion.module';
-import { DashboardModule } from './dashboard/dashboard.module';
-import { InventarioModule } from './inventario/inventario.module';
-import { ProgresoConstruccionModule } from './progreso-construccion/progreso-construccion.module';
+import { AutenticacionModule } from './pages/autenticacion/autenticacion.module';
+import { DashboardModule } from './pages/dashboard/dashboard.module';
+import { InventarioModule } from './pages/inventario/inventario.module';
+import { ProgresoConstruccionModule } from './pages/progreso-construccion/progreso-construccion.module';
 
 @NgModule({
   declarations: [
