@@ -35,3 +35,17 @@ h2 {
 .text-right {
   text-align: right;
 }
+
+.text-center {
+  text-align: center;
+}
+
+span.tag {
+  background-color: $color-secondary;
+  color: white;
+  width: fit-content;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  white-space: nowrap;
+}
