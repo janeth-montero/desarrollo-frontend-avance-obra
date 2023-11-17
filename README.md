@@ -54,7 +54,6 @@ ng serve -o
 
 La aplicación se recargará automáticamente si cambia alguno de los archivos fuente.
 
-
 ## Build
 
 Ejecuta `ng build` para compilar el proyecto. Los archivos generados en la compilación se almacenarán en el directorio `dist/`.
@@ -62,3 +61,61 @@ Ejecuta `ng build` para compilar el proyecto. Los archivos generados en la compi
 ## Más ayuda
 
 Para obtener más ayuda sobre Angular CLI, utiliza `ng help` o consulte el sitio [Angular CLI Overview and Command Reference](https://angular.io/cli).
+
+## Estructura del proyecto
+
+Estructura inicial del proyecto:
+
+```bash
+
+src/                          # Carpeta principal del proyecto.
+├── app/
+│   ├── pages/                # Carpeta con los modulos de cada pagina y sus componentes.
+│   │   ├── autenticacion/
+│   │   │   ├── autenticacion.module.ts
+│   │   │   ├── ...
+│   │   │
+│   │   ├── dashboard/
+│   │   │   ├── dashboard.module.ts
+│   │   │   ├── ...
+│   │   │
+│   │   ├── inventario/
+│   │   │   ├── inventario.module.ts
+│   │   │   ├── ...
+│   │   │
+│   │   └── progreso-obra/
+│   │       ├── progreso-obra.module.ts
+│   │       ├── ...
+│   │
+│   │
+│   ├── services/             # Carpeta con los servicios de datos.
+│   │   ├── casa.service.ts
+│   │   ├── ...
+│   │
+│   │
+│   ├── models/               # Carpeta con los modelos, interfaces y datos estaticos.
+│   │   ├── casa.model.ts
+│   │   ├── ...
+│   │
+│   │
+│   ├── app-routing.module.ts # modulo con la configuracion del routeo.
+│   ├── app.module.ts         # modulo principal y de arranque del sistema.
+│   ├── ...
+│
+│
+├── assets/
+│
+├── styles/
+│
+├── ...
+
+```
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+Proyecto desarrollado por Janeth Montero como proyecto de la clase Desarrollo Frontend. Con este proyecto se pretende adentrar a los estudiantes en los temas estudiados.
+Contacto: janeth.montero@unison.mx │ [LinkedIn](https://www.linkedin.com/in/janeth-montero/)
