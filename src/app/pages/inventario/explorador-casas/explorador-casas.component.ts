@@ -1,15 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { Casa, listaCasasDummy } from 'src/app/models/casa';
+import { Casa } from 'src/app/models/casa';
+
+import { CasasService } from 'src/app/services/casas.service';
+
 
 @Component({
   selector: 'app-explorador-casas',
   templateUrl: './explorador-casas.component.html',
   styleUrls: ['./explorador-casas.component.scss']
 })
-export class ExploradorCasasComponent {
+export class ExploradorCasasComponent implements OnInit {
 
-  listadoCasas: Casa[] = listaCasasDummy;
+  listadoCasas: Casa[] = [];
+
+
+  constructor(private data: CasasService) {
+
+  }
+
+
+  ngOnInit(): void {
+    this.listadoCasas = this.data.getCasasListas();
+  }
 
 
   get mensaje(): string {
