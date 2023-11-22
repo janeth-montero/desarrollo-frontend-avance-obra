@@ -3,7 +3,7 @@
 header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: $color-tertiary;
   box-shadow: 0 8px 8px -4px rgb(186, 186, 186);
@@ -15,36 +15,43 @@ header {
   min-height: $header-height;
   height: $header-height;
 
+  .app-title {
+    padding: 0.5rem 2rem;
+  }
+
   nav {
 
-      ul {
-        display: block;
-        text-transform: uppercase;
-        list-style: none;
-        padding: 0;
-        text-align: center;
-        margin: 0;
-      }
-
-      li {
-        display: inline;
-        margin-right: 2rem;
-        padding: 0.5rem 2rem;
-        transition: color 0.3s ease;
-
-        &:hover {
-          background: rgba(255, 255, 255, 0.3);
-          border-radius: 5px;
-        }
-      }
-
-      a {
-        text-decoration: none;
-        color: $font-color-light;
-        font-weight: bold;
-      }
-
+    ul {
+      display: block;
+      text-transform: uppercase;
+      list-style: none;
+      padding: 0;
+      text-align: center;
+      margin: 0;
     }
+
+    li {
+      display: inline;
+      margin-right: 2rem;
+      padding: 0.5rem 2rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $font-color-light;
+    }
+
+    a.active {
+      font-weight: bold;
+    }
+
+  }
 }
 
 

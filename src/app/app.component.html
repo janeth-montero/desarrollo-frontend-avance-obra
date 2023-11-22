@@ -1,13 +1,29 @@
 <header>
-  {{ titulo | uppercase }}
+
+  <div class="app-title">
+    {{ titulo | uppercase }}
+  </div>
+
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="active">Inicio</a>
+      </li>
+
+      <li>
+        <a routerLink="/inventario" routerLinkActive="active">Inventario</a>
+      </li>
+
+      <li>
+        <a routerLink="/avance-obra" routerLinkActive="active">Avance de obra</a>
+      </li>
+    </ul>
+  </nav>
+
 </header>
 
 <main>
 
-  <app-explorador-casas>
-
-  </app-explorador-casas>
-
-  <!-- <router-outlet></router-outlet> -->
+  <router-outlet></router-outlet>
 
 </main>

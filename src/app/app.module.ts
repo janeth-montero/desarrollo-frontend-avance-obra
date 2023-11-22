@@ -11,7 +11,7 @@ import { ProgresoConstruccionModule } from './pages/progreso-construccion/progre
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
