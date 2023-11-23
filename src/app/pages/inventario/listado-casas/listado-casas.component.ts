@@ -13,6 +13,8 @@ export class ListadoCasasComponent {
 
   @Input() cargandoCasas = false;
 
+  casaSeleccionada: Casa | null = null;
+
   rutaImagen = '../../../../assets/img/real-estate/';
 
 }

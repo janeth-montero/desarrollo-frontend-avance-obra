@@ -6,7 +6,7 @@ import { CasasService } from 'src/app/services/casas.service';
 import { ExploradorCasasComponent } from './explorador-casas/explorador-casas.component';
 import { FiltroCasasComponent } from './filtro-casas/filtro-casas.component';
 import { ListadoCasasComponent } from './listado-casas/listado-casas.component';
-import { DetalleCasasComponent } from './detalle-casas/detalle-casas.component';
+import { DetalleCasaComponent } from './detalle-casa/detalle-casa.component';
 
 
 
@@ -15,7 +15,7 @@ import { DetalleCasasComponent } from './detalle-casas/detalle-casas.component';
     ExploradorCasasComponent,
     FiltroCasasComponent,
     ListadoCasasComponent,
-    DetalleCasasComponent
+    DetalleCasaComponent
   ],
   imports: [
     CommonModule

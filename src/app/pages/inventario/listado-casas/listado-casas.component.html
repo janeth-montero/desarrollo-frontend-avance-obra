@@ -18,7 +18,7 @@
 
     <tbody>
 
-      <tr *ngFor="let casa of listadoCasas">
+      <tr *ngFor="let casa of listadoCasas" (click)="casaSeleccionada = casa">
         <td> <strong>{{ casa.id }}</strong> </td>
         <td> <img [src]="rutaImagen + casa.imagen" [alt]="casa.id"> </td>
         <td> <span class="tag">{{ casa.estatus }}</span> </td>
@@ -39,3 +39,10 @@
 <div class="message" *ngIf="listadoCasas.length === 0">
   <p>{{ cargandoCasas ? 'Cargando...' : 'No se encontraron registros...'}}</p>
 </div>
+
+
+<app-detalle-casa *ngIf="casaSeleccionada !== null"
+  [casa]="casaSeleccionada"
+  (close)="casaSeleccionada = null">
+
+</app-detalle-casa>
