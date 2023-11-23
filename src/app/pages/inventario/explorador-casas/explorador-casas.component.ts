@@ -12,6 +12,8 @@ import { CasasService } from 'src/app/services/casas.service';
 })
 export class ExploradorCasasComponent implements OnInit {
 
+  cargandoCasas = false;
+
   listadoCasas: Casa[] = [];
 
 
@@ -20,20 +22,33 @@ export class ExploradorCasasComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
-
-    this.data.getCasasListas()
-      .subscribe(casas => {
-        this.listadoCasas = casas;
-      });
-
+  ngOnInit() {
+    this.getCasasListas();
   }
 
 
   get mensaje(): string {
-    return this.listadoCasas.length > 0 ?
-      `${this.listadoCasas.length} registros encontrados.` :
-      'No se han encontrado registros...';
+    if (this.cargandoCasas) {
+      return 'Cargando...';
+    } else {
+
+      return this.listadoCasas.length > 0 ?
+        `${this.listadoCasas.length} registros encontrados.` :
+        'No se han encontrado registros...';
+
+    }
+
+  }
+
+
+  private getCasasListas() {
+    this.cargandoCasas = true;
+
+    this.data.getCasasListas()
+      .subscribe(x => {
+        this.cargandoCasas = false;
+        this.listadoCasas = x;
+      });
   }
 
 }

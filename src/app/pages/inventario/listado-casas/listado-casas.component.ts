@@ -11,6 +11,8 @@ export class ListadoCasasComponent {
 
   @Input() listadoCasas: Casa[] = [];
 
+  @Input() cargandoCasas = false;
+
   rutaImagen = '../../../../assets/img/real-estate/';
 
 }

@@ -37,5 +37,5 @@
 </div>
 
 <div class="message" *ngIf="listadoCasas.length === 0">
-  <p>No se encontraron registros...</p>
+  <p>{{ cargandoCasas ? 'Cargando...' : 'No se encontraron registros...'}}</p>
 </div>
