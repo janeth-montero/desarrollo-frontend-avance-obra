@@ -21,7 +21,12 @@ export class ExploradorCasasComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.listadoCasas = this.data.getCasasListas();
+
+    this.data.getCasasListas()
+      .subscribe(casas => {
+        this.listadoCasas = casas;
+      });
+
   }
 
 

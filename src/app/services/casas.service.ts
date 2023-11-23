@@ -1,17 +1,24 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-import { Casa, listaCasasDummy } from '../models/casa';
+import { Casa } from '../models/casa';
+import { Observable } from 'rxjs';
+
+const API_PATH = 'https://655eac02879575426b43c5d3.mockapi.io/api/';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CasasService {
 
-  constructor() { }
+
+  constructor(private http: HttpClient) { }
 
 
-  getCasasListas(): Casa[] {
-    return listaCasasDummy;
+  getCasasListas(): Observable<Casa[]> {
+    const path = API_PATH + 'casas';
+
+    return this.http.get<Casa[]>(path);
   }
 
 }
